@@ -9,6 +9,8 @@
     <script src="/JS/timer.JS"></script>
     <script src="/JS/avtar-menu.js"></script>
     <script src="/JS/menu.js"></script>
+    <script src="/JS/newTask.js"></script>
+    <script src="/JS/exit.js"></script>
 </head>
 <body>
     <section id="side" class="side show">
@@ -88,7 +90,6 @@
         </div>
         <section class="body">
             <div class="mBg"></div>
-            
             <div class="cont">
                 <div class="st">
                     <p>Pages</p>
@@ -123,7 +124,7 @@
                         <div class="chk">
                             <input type="checkbox" name="alDon" id="">
                         </div>
-                        <button type="button">
+                        <button onclick="showNewTask()" type="button">
                             <img src="/Icons/plus.svg" alt="">
                         </button>
                     </div>
@@ -141,14 +142,14 @@
                     </div>
                 </div>
             </div>
-            <div class="nwTsk">
-                <div class="contain">
-                    <input class="nwTskName" type="text" name="nwTskName" id="nwTskName" placeholder="New task">
-                    <button class="nwTskBtn" type="submit">
-                        <img class="nwTskDone" src="/Icons/done2.svg" alt="" srcset="">
-                    </button>
-                </div>
+            <div onclick="exitNw()" id="new" class="nwTsk">
             </div>
+            <form action="/PHP/tasks.php" id="newCon" class="contain">
+                <input id="nwTskName" class="nwTskName" type="text" name="nwTskName" id="nwTskName" placeholder="New task">
+                <button class="nwTskBtn" type="submit">
+                    <img class="nwTskDone" src="/Icons/done2.svg" alt="" srcset="">
+                </button>
+            </form>
         </section>
     </section>
 </body>
