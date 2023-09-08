@@ -403,6 +403,54 @@ body {
     filter: invert(24%) sepia(84%) saturate(4649%) hue-rotate(357deg) brightness(102%) contrast(98%);
 }
 
+.nwTsk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.contain {
+    width: 60vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    margin: calc(50vh - 30px) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 7px;
+}
+
+.nwTskName {
+    width: 85%;
+    height: 40px;
+    font-family: var(--fF);
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    padding: 0 10px;
+    border-radius: 7px;
+}
+
+.nwTskBtn {
+    width: 10%;
+    height: 40px;
+    border-radius: 7px;
+    background-color: var(--bg);
+    box-shadow: 0px 0px 2px 0px rgb(99, 99, 99);
+    border: 0;
+}
+
+.nwTskDone {
+    height: 40px;
+}
+
 @media screen and (max-width: 1060px) {
 
     body {
