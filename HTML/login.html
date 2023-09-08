@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Dashboard</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+    <script src="/JS/login-log.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <img src="/Icons/ironman.svg" alt="" srcset="">Dashboard 3000 Login
+        </div>
+    </nav>
+    <div class="form">
+        <form action="/PHP/login.php" method="post" autocomplete="off">
+            <div class="input">
+                <div class="inpt">
+                    <input class="in" type="text" name="usrName" id="usrName" placeholder="User Name" required>
+                </div>
+                <div class="lin"></div>
+                <div class="inpt">
+                    <input class="in" type="password" name="pwd" id="pwd" placeholder="Password" required>
+                </div>
+            </div>
+            <input class="btn" type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

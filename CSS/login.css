@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --bg: rgb(255, 255, 255);
+    --aC: rgb(0, 140, 255);
+    --mC: rgb(31, 44, 59);
+    --mF: rgb(73, 88, 104);
+    --ma: rgb(155, 177, 201);
+    --fC: rgb(1, 20, 34);
+    --bgA: rgba(0, 140, 255, 0.466);
+    --nIc: 24px; 
+    --ic: 20px; 
+    --fF: 'K2D', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fF);
+}
+
+body {
+    height: calc(100vh - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav {
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--aC);
+    color: var(--bg);
+    border-radius: 7px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav img {
+    height: 40px;
+    filter: invert();
+}
+
+form {
+    width: 25rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input {
+    border-radius: 25px;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid var(--mC);
+}
+
+.inpt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.in {
+    width: calc(100% - 10px);
+    height: 3rem;
+    border: none;
+    color: var(--fC);
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.lin {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+#usrName {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 1px;
+}
+
+#usrName:active , #usrName:read-write {
+    outline-color: var(--bgA);
+    color: rgb(0, 51, 94);
+}
+
+#pwd {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#pwd:active , #pwd:read-write {
+    outline-color: var(--bgA);
+    color: rgb(0, 51, 94);
+}
+
+.btn {
+    width: 6rem;
+    height: 2rem;
+    border: 0;
+    background-color: var(--aC);
+    border-radius: 25px;
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 17px;
+}
