@@ -11,6 +11,7 @@
     <script src="/JS/menu.js"></script>
     <script src="/JS/newTask.js"></script>
     <script src="/JS/exit.js"></script>
+    <script src="/JS/tasksCheck.js"></script>
 </head>
 <body>
     <section id="side" class="side show">
@@ -122,29 +123,19 @@
                     <div class="action">
                         <div class="tit">Tasks</div>
                         <div class="chk">
-                            <input type="checkbox" name="alDon" id="">
+                            <input type="checkbox" name="alDon" id="main-check" onclick="checkAll()">
                         </div>
                         <button onclick="showNewTask()" type="button">
                             <img src="/Icons/plus.svg" alt="">
                         </button>
                     </div>
-                    <div class="task">
-                        <div class="tsk">
-                            <p class="tNam">Test</p>
-                            <input class="tChk" type="checkbox" name="tChk" id="Chk1">
-                            <img class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">
-                        </div>
-                        <div class="tsk">
-                            <p class="tNam">Test</p>
-                            <input class="tChk" type="checkbox" name="tChk" id="Chk2">
-                            <img class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">
-                        </div>
+                    <div id="tasks" class="task">
                     </div>
                 </div>
             </div>
             <div onclick="exitNw()" id="new" class="nwTsk">
             </div>
-            <form action="/PHP/tasks.php" id="newCon" class="contain">
+            <form id="newCon" class="contain">
                 <input id="nwTskName" class="nwTskName" type="text" name="nwTskName" id="nwTskName" placeholder="New task">
                 <button class="nwTskBtn" type="submit">
                     <img class="nwTskDone" src="/Icons/done2.svg" alt="" srcset="">
@@ -152,5 +143,6 @@
             </form>
         </section>
     </section>
+    <script src="/JS/tasks.js"></script>
 </body>
 </html>
