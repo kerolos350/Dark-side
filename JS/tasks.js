@@ -1,3 +1,6 @@
+var serverIP = location.host;
+var link = "http://" + serverIP;
+
 async function fetchData(url) {
     try {
         const response = await fetch(url);
@@ -12,7 +15,7 @@ async function fetchData(url) {
     }
 }
 
-const url = 'http://192.168.1.2/JSON/task.json';
+const url = link + '/JSON/task.json';
 
 
 (async () => {

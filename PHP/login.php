@@ -1,5 +1,7 @@
 <?php
 
+$ip_server = $_SERVER['HTTP_CLIENT_IP'];
+
 // The username & password from the login form
 $usrName = $_POST["usrName"];
 $pwd = $_POST["pwd"];
@@ -15,16 +17,18 @@ $hashed_pwd = $json_data['pwd'];
 
 $verify = password_verify($pwd, $hashed_pwd);
 
-$server = "192.168.1.2";
+$server = $ip_server;
 
 if ($usrName == $user and $verify) {
     $cookie_name = "loged_in";
     $cookie_value = "True";
     setcookie($cookie_name, $cookie_value, time() + (60 * 60 * 5), "/"); // 86400 = 1 day
-    header("Location: http://$server/HTML/dashboard.html");
+    header("Location: $server/HTML/dashboard.html");
+    echo("Location: $server/HTML/dashboard.html");
     die();
 } else {
-    header("Location: http://$server/HTML/login.html");
+    header("Location: $server/HTML/login.html");
+    echo("Location: $server/HTML/login.html");
 }
 
 ?>

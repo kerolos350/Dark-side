@@ -1,5 +1,9 @@
+var serverIP = location.host;
+var link = "http://" + serverIP;
+
+
 var value = document.cookie.valueOf('loged_in');
 
 if (value == "loged_in=True") {
-    window.location.href = "http://192.168.1.2/HTML/dashboard.html";
+    window.location.href = link + "/HTML/dashboard.html";
 }
