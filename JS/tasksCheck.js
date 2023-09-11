@@ -32,4 +32,4 @@ function allChecked() {
 }
 
 
-// setInterval(allChecked, 50)
+setInterval(allChecked, 50)

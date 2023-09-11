@@ -58,4 +58,4 @@ function checkChecker() {
     xhr.send(data);
 }
 
-// setInterval(checkChecker, 1000);
+setInterval(checkChecker, 1000);
