@@ -29,14 +29,14 @@ const url = link + '/JSON/task.json';
 
             const newDiv = document.createElement("div");
             if (done == true) {
-                var cont = '<p class="tNam">' + task_name + '</p><input id="' + index +'check" class="tChk" type="checkbox" name="tChk" checked><img class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">';
-                newDiv.className = "tsk";
+                var cont = '<p class="tNam">' + task_name + '</p><input onclick="checkChecker()" id="' + index +'check" class="tChk" type="checkbox" name="tChk" checked><img id="' + index +'del" class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">';
+                newDiv.className = "tsk R" + index;
                 newDiv.innerHTML = cont;
 
                 tasks.appendChild(newDiv);
             } else {
-                var cont = '<p class="tNam">' + task_name + '</p><input id="' + index +'check" class="tChk" type="checkbox" name="tChk"><img class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">';
-                newDiv.className = "tsk";
+                var cont = '<p class="tNam">' + task_name + '</p><input onclick="checkChecker()" id="' + index +'check" class="tChk" type="checkbox" name="tChk"><img id="' + index +'del" class="tskD" onclick="tskRem()" src="/Icons/delete2.svg" alt="" srcset="">';
+                newDiv.className = "tsk R" + index;
                 newDiv.innerHTML = cont;
 
                 tasks.appendChild(newDiv);

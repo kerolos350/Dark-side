@@ -12,7 +12,8 @@
     <script src="/JS/menu.js"></script>
     <script src="/JS/newTask.js"></script>
     <script src="/JS/exit.js"></script>
-    <script src="/JS/tasksCheck.js"></script>
+    <script src="/JS/checkChecker.js"></script>
+    <script src="/JS/remTask.js"></script>
 </head>
 <body>
     <section id="side" class="side show">
@@ -136,7 +137,7 @@
             </div>
             <div onclick="exitNw()" id="new" class="nwTsk">
             </div>
-            <form id="newCon" class="contain">
+            <form action="/PHP/newTask.php" id="newCon" class="contain" method="post">
                 <input id="nwTskName" class="nwTskName" type="text" name="nwTskName" id="nwTskName" placeholder="New task">
                 <button class="nwTskBtn" type="submit">
                     <img class="nwTskDone" src="/Icons/done2.svg" alt="" srcset="">
@@ -145,5 +146,6 @@
         </section>
     </section>
     <script src="/JS/tasks.js"></script>
+    <script src="/JS/tasksCheck.js"></script>
 </body>
 </html>
