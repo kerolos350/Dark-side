@@ -107,6 +107,7 @@ main {
     background: var(--acBg-light);
     border: 1px solid --border-light;
     border-radius: 5px;
+    display: none;
 }
 
 .menu {
