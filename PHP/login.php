@@ -22,7 +22,8 @@ $server = $ip_server;
 if ($usrName == $user and $verify) {
     $cookie_name = "loged_in";
     $cookie_value = "True";
-    setcookie($cookie_name, $cookie_value, time() + (60 * 60 * 5), "/"); // 86400 = 1 day
+    setcookie($cookie_name, $cookie_value, time() + (60 * 60 * 5), "/"); // 86400 = 1 day (counted by sec)
+    setcookie("user_name", $user, time() + (60 * 60 * 5), "/");
     header("Location: $server/HTML/dashboard.html");
     echo("Location: $server/HTML/dashboard.html");
     die();

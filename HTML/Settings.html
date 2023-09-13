@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="shortcut icon" href="settings.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/settings.css">
+    <script src="/JS/login.js"></script>
+    <script src="/JS/dropMenu.js"></script>
+</head>
+<body>
+    <header>
+        <a class="back" href="/HTML/dashboard.html"><img src="/Icons/back.svg" alt=""></a>
+        <p>Setting</p>
+    </header>
+    <main>
+        <div class="asideItems">
+            <div class="asideItem">
+                <div class="itemCont">
+                    <img class="icon" src="/Icons/account.svg" alt="" srcset="">Account
+                </div>
+                <button class="dropBtn" onclick="dropMenu(account)">
+                    <img class="icon dropIcon" src="/Icons/down.svg" alt="" srcset="">
+                </button>
+            </div>
+            <div class="dropMenu" id="account">
+                <div class="menu">
+                    <div class="profile">
+                        <p>Profile</p>
+                        <button onclick="addProfile()">
+                            <img class="icon" src="/Icons/add.svg" alt="" srcset="">
+                            Add profile
+                        </button>
+                    </div>
+                    <div class="user">
+                        <div class="usr">
+                            <img class="avtr" src="/Icons/avtr.svg" alt="">
+                            <p class="usrName">root</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
