@@ -17,5 +17,6 @@ function addProfile() {
         hidden[0].style.zIndex = 0;
         hidden[0].style.display = 'none';
         main[0].style.zIndex = 1000;
+        main[0].focus()
     }
 }
