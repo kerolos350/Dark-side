@@ -1,6 +1,4 @@
 <?php
-
-$ip_server = $_SERVER['HTTP_CLIENT_IP'];
 // Receive the JSON data from the AJAX request
 $data = json_decode(file_get_contents('php://input'), true);
 

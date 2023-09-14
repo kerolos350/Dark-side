@@ -2,6 +2,7 @@
 
 :root {
     --bg-light: rgb(255, 255, 255);
+    --accent-light: rgb(0, 132, 255);
     --acBg-light: rgb(202, 202, 202);
     --itBg-light: rgb(115, 156, 194);
     --border-light: rgb(165, 165, 165);
@@ -51,6 +52,7 @@ main {
     position: fixed;
     left: 0px;
     top: 60px;
+    z-index: 1;
 }
 
 .asideItems {
@@ -171,4 +173,72 @@ main {
     font-size: 20px;
     font-family: var(--fF);
     font-weight: 500;
+}
+
+.hidden {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.newUsr {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.newUsr form {
+    width: 80%;
+    height: 60%;
+    background-color: var(--acBg-light);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.newUsr form input {
+    width: 60%;
+    height: 40px;
+    font-size: 17px;
+    font-family: var(--fF);
+    font-weight: 500;
+    padding-left: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid var(--itBg-light);
+    color: black;
+}
+
+.newUsr form button {
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    font-family: var(--fF);
+    font-weight: 500;
+    color: black;
+    background-color: var(--accent-light);
+    border: none;
+    border-radius: 25px;
+}
+
+.newUsr form p {
+    color: red;
+    position: absolute;
+    top: calc(50vh + 130px);
+    font-family: var(--fF);
+    font-size: 17px;
+    font-weight: 500;
+    width: 190px;
+    height: 20px;
 }

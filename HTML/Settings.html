@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
-    <link rel="shortcut icon" href="settings.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Icons/setting.svg" type="image/x-icon">
     <link rel="stylesheet" href="/CSS/settings.css">
     <script src="/JS/login.js"></script>
     <script src="/JS/dropMenu.js"></script>
+    <script src="/JS/user.js"></script>
+    <script src="/JS/avatar.js"></script>
+    <script src="/JS/addMenu.js"></script>
 </head>
 <body>
     <header>
@@ -36,7 +39,7 @@
                     <div class="user">
                         <div class="usr">
                             <img id="avatar" class="avtr" src="/Icons/avtr.svg" alt="">
-                            <p class="usrName">root</p>
+                            <p class="usrName"></p>
                         </div>
                     </div>
                 </div>
@@ -44,5 +47,17 @@
             </div>
         </div>
     </main>
+    <section class="hidden">
+        <div id="addUser" onclick="exit()" class="newUsr">
+            <form  action="/PHP/newUser.php" method="post" onsubmit="return validateForm()">
+                <input id="username" type="text" name="username" placeholder="Username" required autocomplete="off">
+                <input id="password" type="password" name="pwd" placeholder="Password" required autocomplete="off">
+                <input id="confirmPassword" type="password" name="confPwd" placeholder="Confirm password" required autocomplete="off">
+                <button type="submit">Add</button>
+                <p id="message"></p>
+            </form>
+            <script src="/JS/pwdConf.js"></script>
+        </div>
+    </section>
 </body>
 </html>
