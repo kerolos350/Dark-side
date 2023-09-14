@@ -6,14 +6,16 @@ function addProfile() {
 
     if (form.style.display != 'flex') {
         form.style.display = 'flex';
-        form.style.zIndex = 1000;
+        form.style.zIndex = 1001;
         hidden[0].style.zIndex = 1000;
+        hidden[0].style.display = 'block';
         main[0].style.zIndex = 0;
         usr.focus();
     } else {
         form.style.display = 'none';
-        form.style.zIndex = 0;
+        form.style.zIndex = 1;
         hidden[0].style.zIndex = 0;
+        hidden[0].style.display = 'none';
         main[0].style.zIndex = 1000;
     }
 }
