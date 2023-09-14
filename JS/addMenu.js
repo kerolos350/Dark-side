@@ -17,8 +17,3 @@ function addProfile() {
         main[0].style.zIndex = 1000;
     }
 }
-
-function exit() {
-    var form = document.getElementbyId('addUser');
-    form.style.display = 'none';
-}
