@@ -12,6 +12,7 @@
     <script src="/JS/avatar.js"></script>
     <script src="/JS/addMenu.js"></script>
     <script src="/JS/settingExit.js"></script>
+    <script src="/JS/avatarChange.js"></script>
 </head>
 <body>
     <header>
@@ -39,7 +40,7 @@
                     </div>
                     <div class="user">
                         <div class="usr">
-                            <img id="avatar" class="avtr" src="/Icons/avtr.svg" alt="">
+                            <img id="avatar" onclick="avatarMenu()" class="avtr" src="/Icons/avtr.svg" alt="">
                             <p class="usrName"></p>
                         </div>
                     </div>
@@ -58,6 +59,9 @@
                 <p id="message"></p>
             </form>
             <script src="/JS/pwdConf.js"></script>
+        </div>
+        <div id="avtrChange" onclick="exit()" class="avatar">
+            <form id="avatarForm" action="/PHP/changeAvatar.php" method="post"></form>
         </div>
     </section>
 </body>
