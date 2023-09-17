@@ -243,3 +243,19 @@ main {
     width: 190px;
     height: 20px;
 }
+
+#avatarForm {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    grid-template-columns: auto auto auto auto auto auto;
+    row-gap: 0px;
+}
+
+.imgChoice {
+    height: 60px;
+    border-radius: 50px;
+    background-color: white;
+}
