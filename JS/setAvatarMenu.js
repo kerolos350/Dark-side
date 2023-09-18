@@ -4,7 +4,7 @@ function avatarMenu() {
     var aside = document.getElementsByClassName('asideItems');
     var form = document.getElementById('addUser');
 
-    if (avatar.style.display === 'none') {
+    if (avatar.style.display !== 'flex') {
         avatar.style.display = 'flex';
         avatar.style.zIndex = '100';
         hidden[0].style.display = 'block';
