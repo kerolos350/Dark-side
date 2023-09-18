@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const doc = parser.parseFromString(htmlContent, 'text/html');
         const links = doc.querySelectorAll('a');
 
-        const allowedExtensions = ['.svg', '.png', '.jpg'];
+        const allowedExtensions = ['.svg', '.png', '.jpg', 'jpeg'];
         const files = [];
         links.forEach(link => {
         const href = link.getAttribute('href');
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         files.forEach(file => {
             const newDiv = document.createElement("div");
+            newDiv.classList.add('input');
             var img = '<img onclick="changeAvatar(' + "'" + file + "'" + ')" class="imgChoice" src="' + dir + file + '" alt="" srcset="">'
             newDiv.innerHTML = img;
 

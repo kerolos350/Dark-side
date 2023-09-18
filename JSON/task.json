@@ -3,6 +3,14 @@
         {
             "task_name": "Settings page",
             "done": false
+        },
+        {
+            "task_name": "account settings",
+            "done": false
+        },
+        {
+            "task_name": "appearance settings",
+            "done": false
         }
     ]
 }

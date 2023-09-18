@@ -259,3 +259,41 @@ main {
     border-radius: 50px;
     background-color: white;
 }
+
+#newAvatar {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#newAvatar + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: var(--accent-light);
+    display: inline-block;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+label img {
+    height: 100%;
+}
+
+#newAvatar:focus + label,
+#newAvatar + label:hover {
+    background-color: var(--itBg-light);
+}
+
+#newAvatar + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+#newAvatar:focus + label {
+	outline: -webkit-focus-ring-color auto 5px;
+	outline: 1px dotted #000;
+}

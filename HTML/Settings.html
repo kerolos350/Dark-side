@@ -62,7 +62,18 @@
             <script src="/JS/pwdConf.js"></script>
         </div>
         <div id="avtrChange" onclick="exit()" class="avatar">
-            <div id="avatarForm"></div>
+            <div id="avatarForm">
+                <form method="post" action="/PHP/addAvatar.php" class="input" enctype="multipart/form-data" id="uploadForm">
+                    <!-- Hidden file input -->
+                    <input type="file" name="newAvatar" id="newAvatar">
+            
+                    <!-- Label with custom styling and behavior -->
+                    <label for="newAvatar" id="fileLabel" class="file-label">
+                        <img src="/Icons/upload.svg" alt="Upload Icon">
+                    </label>
+                </form>
+                <script src="/JS/addAvatar.js"></script>
+            </div>
             <script src="/JS/changeAvatar.js"></script>
         </div>
     </section>

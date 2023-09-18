@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var serverIP = location.host;
-    var link = "http://" + serverIP;
-
     var user = document.cookie.valueOf("user_name");
 
     // Split the string by semicolon and space
