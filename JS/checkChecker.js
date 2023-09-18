@@ -25,7 +25,7 @@ function checkChecker() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Handle the PHP script's response here, if needed
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
         }
     };
 
@@ -51,7 +51,7 @@ function checkChecker() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Handle the PHP script's response here, if needed
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
         }
     };
 
