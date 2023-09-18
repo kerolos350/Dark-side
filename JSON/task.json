@@ -5,11 +5,11 @@
             "done": false
         },
         {
-            "task_name": "account settings",
+            "task_name": "appearance settings",
             "done": false
         },
         {
-            "task_name": "appearance settings",
+            "task_name": "change password settings",
             "done": false
         }
     ]

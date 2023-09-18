@@ -297,3 +297,23 @@ label img {
 	outline: -webkit-focus-ring-color auto 5px;
 	outline: 1px dotted #000;
 }
+
+@media screen and (max-width: 650px) {
+    #avatarForm {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #avatarForm {
+        height: 80%;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    #avatarForm {
+        height: 80%;
+        grid-template-columns: auto auto;
+    }
+}

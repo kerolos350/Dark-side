@@ -41,4 +41,6 @@ function changeAvatar(file) {
     };
 
     xhr.send(formData);
+
+    document.getElementById("avatar").src = '/Icons/Account/' + file;
 }
