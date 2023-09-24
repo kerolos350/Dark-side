@@ -167,6 +167,7 @@ main {
     border: 1px solid black;
     border-radius: 25px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .user p {
@@ -188,7 +189,7 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.newUsr, #avtrChange {
+.newUsr, #avtrChange, .chPwdForm {
     width: 100%;
     height: 100%;
     display: none;
@@ -208,7 +209,7 @@ main {
     gap: 20px;
 }
 
-.newUsr form input {
+.newUsr form input, .chPwdForm form input {
     width: 60%;
     height: 40px;
     font-size: 17px;
@@ -221,7 +222,7 @@ main {
     color: black;
 }
 
-.newUsr form button {
+.newUsr form button, .chPwdForm form button {
     width: 100px;
     height: 40px;
     font-size: 17px;
@@ -233,7 +234,7 @@ main {
     border-radius: 25px;
 }
 
-.newUsr form p {
+.newUsr form p, #chMessage {
     color: red;
     position: absolute;
     top: calc(50vh + 130px);
@@ -298,20 +299,61 @@ label img {
 	outline: 1px dotted #000;
 }
 
+.changePass {
+    width: 145px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid var(--border-light);
+    border-radius: 7px;
+    font-family: var(--fF);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+}
+
+.chPwdForm form {
+    padding: 10px;
+    width: 80%;
+    height: 40%;
+    background-color: var(--acBg-light);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @media screen and (max-width: 650px) {
+    .user {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 590px) {
     #avatarForm {
         grid-template-columns: auto auto auto auto;
     }
 }
 
 @media screen and (max-width: 450px) {
+    .menu {
+        padding: 50px;
+    }
+
     #avatarForm {
         height: 80%;
         grid-template-columns: auto auto auto;
     }
 }
 
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 310px) {
+    .menu {
+        padding: 20px;
+    }
+
     #avatarForm {
         height: 80%;
         grid-template-columns: auto auto;

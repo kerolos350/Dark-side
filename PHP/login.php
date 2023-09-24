@@ -7,7 +7,7 @@ $usrName = $_POST["usrName"];
 $pwd = $_POST["pwd"];
 
 // Get the data form the json file
-$file = "/srv/http/JSON/login/$usrName.json";
+$file = "/var/www/html/JSON/login/$usrName.json";
 $data = file_get_contents($file);
 $json_data = json_decode($data,true);
 

@@ -6,7 +6,7 @@ $server = $ip_server;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if a file was uploaded successfully
     if (isset($_FILES["newAvatar"]) && $_FILES["newAvatar"]["error"] === UPLOAD_ERR_OK) {
-        $uploadDir = "/srv/http/Icons/Account/"; // Specify the destination directory (create this directory if it doesn't exist)
+        $uploadDir = "/var/www/html/Icons/Account/"; // Specify the destination directory (create this directory if it doesn't exist)
         $uploadFile = $uploadDir . basename($_FILES["newAvatar"]["name"]); // Generate the full path for the uploaded file
 
         // Check if the destination directory exists; if not, create it with appropriate permissions
@@ -54,7 +54,7 @@ if (isset($_COOKIE['user_name'])) {
     // Validate user input to prevent directory traversal
     if (preg_match('/^[a-zA-Z0-9_]+$/', $user)) {
         // Construct the file path using a safe method
-        $jsonFilePath = '/srv/http/JSON/login/' . $user . '.json';
+        $jsonFilePath = '/var/www/html/JSON/login/' . $user . '.json';
 
         // Check if the file exists and is writable
         if (is_writable($jsonFilePath)) {

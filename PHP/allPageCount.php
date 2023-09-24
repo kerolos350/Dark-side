@@ -16,7 +16,7 @@ function countFilesInFolder($folderPath) {
     return $fileCount;
 }
 
-$folderPaths = ['/srv/http/Pages/', '/srv/http/In-prog/'];
+$folderPaths = ['/var/www/html/Pages/', '/var/www/html/In-prog/'];
 $totalFileCount = 0;
 
 foreach ($folderPaths as $folderPath) {

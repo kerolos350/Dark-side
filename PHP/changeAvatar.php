@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Validate user input to prevent directory traversal
         if (preg_match('/^[a-zA-Z0-9_]+$/', $user)) {
             // Construct the file path using a safe method
-            $jsonFilePath = '/srv/http/JSON/login/' . $user . '.json';
+            $jsonFilePath = '/var/www/html/JSON/login/' . $user . '.json';
 
             // Check if the file exists and is writable
             if (is_writable($jsonFilePath)) {

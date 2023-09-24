@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Specify the path to your JSON file
-$jsonFilePath = '/srv/http/JSON/task.json';
+$jsonFilePath = '/var/www/html/JSON/' . $_COOKIE['user_name'] . '-tasks.json';
 
 // Decode the JSON data sent from JavaScript
 $inputData = json_decode(file_get_contents('php://input'), true);

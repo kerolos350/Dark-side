@@ -14,6 +14,7 @@
     <script src="/JS/settingExit.js"></script>
     <script src="/JS/avatarList.js"></script>
     <script src="/JS/setAvatarMenu.js"></script>
+    <script src="/JS/changePassMenu.js"></script>
 </head>
 <body>
     <header>
@@ -44,6 +45,7 @@
                             <img id="avatar" onclick="avatarMenu()" class="avtr" src="/Icons/avtr.svg" alt="">
                             <p class="usrName"></p>
                         </div>
+                        <button class="changePass" onclick="changePassMenu()">Change password</button>
                     </div>
                 </div>
             </div>
@@ -61,20 +63,26 @@
             </form>
             <script src="/JS/pwdConf.js"></script>
         </div>
-        <div id="avtrChange" onclick="exit()" class="avatar">
+        <div id="avtrChange" onclick="avatarExit()" class="avatar">
             <div id="avatarForm">
                 <form method="post" action="/PHP/addAvatar.php" class="input" enctype="multipart/form-data" id="uploadForm">
-                    <!-- Hidden file input -->
-                    <input type="file" name="newAvatar" id="newAvatar">
-            
-                    <!-- Label with custom styling and behavior -->
-                    <label for="newAvatar" id="fileLabel" class="file-label">
-                        <img src="/Icons/upload.svg" alt="Upload Icon">
+                    <input class="uploadAv" type="file" name="newAvatar" id="newAvatar">
+                    <label for="newAvatar" id="fileLabel" class="file-label uploadAv">
+                        <img class="uploadAv" src="/Icons/upload.svg" alt="Upload Icon">
                     </label>
                 </form>
                 <script src="/JS/addAvatar.js"></script>
             </div>
             <script src="/JS/changeAvatar.js"></script>
+        </div>
+        <div id="chPass" onclick="chPassExit()" class="chPwdForm">
+            <form  action="/PHP/changePass.php" method="post" onsubmit="return validateForm()">
+                <input id="chPassword" type="password" name="pwd" placeholder="Password" required autocomplete="off">
+                <input id="chConfirmPassword" type="password" name="confPwd" placeholder="Confirm password" required autocomplete="off">
+                <button type="submit">Add</button>
+                <p id="chMessage"></p>
+            </form>
+            <script src="/JS/chPwdConf.js"></script>
         </div>
     </section>
 </body>

@@ -1,5 +1,5 @@
 <?php
-$folderPath = '/srv/http/Pages/In-prog/'; // Replace with your server folder path
+$folderPath = '/var/www/html/Pages/In-prog/'; // Replace with your server folder path
 $files = scandir($folderPath);
 
 $fileCount = count(array_filter($files, function ($file) use ($folderPath) {
